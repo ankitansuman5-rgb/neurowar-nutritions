@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Neurowar Nutritions | Natural Protein for India</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Neurowar Nutritions offers 100% natural, chemical-free protein made from chana, soyabean, nuts and seeds. Order online across India." />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #0b0f19; color: #fff; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAVBAR */
+    header { background: #020617; padding: 16px 40px; position: sticky; top: 0; z-index: 1000; }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.4rem; font-weight: bold; letter-spacing: 1px; }
+    .nav-links a { margin-left: 20px; color: #cbd5f5; }
+    .nav-links a:hover { color: #22c55e; }
+
+    /* HERO */
+    .hero { padding: 100px 40px; text-align: center; background: radial-gradient(circle at top, #1e293b, #020617); }
+    .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+    .hero span { color: #22c55e; }
+    .hero p { max-width: 700px; margin: auto; color: #cbd5f5; }
+    .btn { display: inline-block; margin-top: 30px; background: #22c55e; color: #020617; padding: 14px 30px; border-radius: 10px; font-weight: bold; }
+
+    /* SECTIONS */
+    section { padding: 80px 40px; max-width: 1200px; margin: auto; }
+    h2 { margin-bottom: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+
+    .card { background: #020617; padding: 25px; border-radius: 14px; border: 1px solid #1e293b; }
+    .card p { color: #cbd5f5; }
+
+    /* PRODUCT */
+    .product-box { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+    /* ORDER FORM */
+    form { background: #020617; padding: 30px; border-radius: 16px; border: 1px solid #1e293b; }
+    input, select, textarea { width: 100%; padding: 12px; margin-top: 10px; border-radius: 8px; border: none; outline: none; }
+    button { margin-top: 20px; padding: 14px; width: 100%; background: #22c55e; border: none; font-weight: bold; border-radius: 10px; cursor: pointer; }
+
+    /* FOOTER */
+    footer { background: #020617; padding: 40px; text-align: center; color: #64748b; border-top: 1px solid #1e293b; }
+
+    /* MOBILE */
+    @media(max-width:768px){
+      .product-box{grid-template-columns:1fr;}
+      .hero h1{font-size:2.2rem;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">NEUROWAR</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#product">Product</a>
+      <a href="#order">Order</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>Fuel Your Strength. <span>Naturally.</span></h1>
+  <p>India’s trusted natural protein made from chana, soyabean, nuts & seeds. No chemicals. No shortcuts. Just real nutrition.</p>
+  <a href="#order" class="btn">Order Now</a>
+</div>
+
+<section id="about">
+  <h2>About Neurowar</h2>
+  <p style="color:#cbd5f5; max-width:800px;">Neurowar Nutritions is built to provide affordable, clean and chemical-free protein for Indian families, students, workers and fitness enthusiasts.</p>
+
+  <div class="grid" style="margin-top:30px;">
+    <div class="card"><h3>Mission</h3><p>Make natural nutrition accessible.</p></div>
+    <div class="card"><h3>Vision</h3><p>Become India’s most trusted nutrition brand.</p></div>
+    <div class="card"><h3>Values</h3><p>Transparency, quality, honesty.</p></div>
+  </div>
+</section>
+
+<section id="product">
+  <h2>Neurowar Natural Protein</h2>
+
+  <div class="product-box">
+    <div>
+      <p style="color:#cbd5f5;">Made using roasted chana, soyabean, almonds, cashews and natural seeds for daily strength and recovery.</p>
+      <ul style="margin-top:20px; color:#cbd5f5;">
+        <li>✔ 100% Natural</li>
+        <li>✔ No Preservatives</li>
+        <li>✔ No Artificial Flavors</li>
+        <li>✔ High Plant Protein</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Ingredient Profile</h3>
+      <p>Chana, Soyabean, Almond, Cashew, Flax Seeds, Pumpkin Seeds, Peanuts.</p>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <h2>Place Your Order</h2>
+
+  <form onsubmit="sendOrder(event)">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="tel" id="phone" placeholder="Phone Number" required />
+    <input type="text" id="city" placeholder="City" required />
+
+    <select id="quantity">
+      <option value="500g">500g</option>
+      <option value="1kg">1kg</option>
+    </select>
+
+    <textarea id="address" placeholder="Delivery Address" required></textarea>
+
+    <button type="submit">Order via WhatsApp</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contact Neurowar</h2>
+  <p style="color:#cbd5f5;">📞 +91-XXXXXXXXXX<br>📧 neurowarnutritions@gmail.com<br>📍 Odisha, India</p>
+</section>
+
+<footer>
+  <p>© 2026 Neurowar Nutritions. All Rights Reserved.</p>
+</footer>
+
+<script>
+  function sendOrder(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const city = document.getElementById('city').value;
+    const quantity = document.getElementById('quantity').value;
+    const address = document.getElementById('address').value;
+
+    const message = `New Order for Neurowar Protein%0A%0AName: ${name}%0APhone: ${phone}%0ACity: ${city}%0AQuantity: ${quantity}%0AAddress: ${address}`;
+
+    const whatsappNumber = '91XXXXXXXXXX'; // Replace with your WhatsApp number
+
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+  }
+</script>
+
+</body>
+</html>
